@@ -1,1 +1,74 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Course Home Page</title>
+    <meta name="description" content="Course home page for WDD 231: Web Frontend Development I.">
+    <meta name="author" content="Edson Reyes">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Site Logo" width="50" height="50">
+        <span>Edson Reyes</span>
+        <button id="menu-button">☰</button>
+    </header>
+
+    <nav id="main-nav">
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+        <section class="card">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button id="all-courses" class="active">All Courses</button>
+                <button id="wdd-courses">WDD</button>
+                <button id="cse-courses">CSE</button>
+            </div>
+            <div id="course-cards-container">
+                </div>
+            <p class="credit-total">Total Credits: <span id="total-credits"></span></p>
+        </section>
+
+        <section class="card">
+            <h2>About Me</h2>
+            <p>Hello! I am a student passionate about web development and creating intuitive, dynamic user experiences. I enjoy tackling challenges and am constantly learning new technologies. This site tracks my progress through the WDD 231 course.</p>
+        </section>
+
+        <section class="card">
+            <h2>Web Development Resources</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
+                <li><a href="https://caniuse.com/">Can I use...</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> | Edson Reyes | Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
