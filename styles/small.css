@@ -31,6 +31,11 @@ header span {
     font-weight: bold;
 }
 
+/* Style for the SVG logo */
+header svg {
+    border-radius: 5px; /* Optional: to make it look nicer */
+}
+
 #menu-button {
     font-size: 2rem;
     background: none;
