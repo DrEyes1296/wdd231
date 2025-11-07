@@ -1,5 +1,3 @@
-/* small.css - Base Styles (Mobile First) */
-
 :root {
     --primary-color: #0077B6;
     --secondary-color: #00B4D8;
@@ -33,7 +31,7 @@ header span {
 
 /* Style for the SVG logo */
 header svg {
-    border-radius: 5px; /* Optional: to make it look nicer */
+    border-radius: 5px; 
 }
 
 #menu-button {
@@ -52,11 +50,11 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: none; /* Hidden by default */
+    display: none; 
 }
 
 nav ul.open {
-    display: block; /* Shown when 'open' class is added */
+    display: block;
 }
 
 nav a {
@@ -145,8 +143,7 @@ footer {
     padding: 1rem;
 }
 
-/* THIS IS THE UPDATED RULE FOR BETTER CONTRAST 
-*/
+
 footer a {
     color: white; 
     text-decoration: underline; 
@@ -154,8 +151,6 @@ footer a {
 }
 
 
-/* --- NEW RULE ADDED --- */
-/* Styles for the new student photo card */
 #student-photo img {
     width: 100%;
     height: auto;

@@ -44,7 +44,7 @@ const courses = [
       credits: 2,
       certificate: 'Web and Computer Programming',
       description: 'This course will introduce students to programming with classes. It will teach basic programming constructs using C#.',
-      completed: true /* <-- THIS IS THE CHANGE YOU REQUESTED */
+      completed: true
     },
     {
       subject: 'WDD',
