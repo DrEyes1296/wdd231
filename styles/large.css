@@ -26,22 +26,49 @@
         grid-column: 1 / -1; /* Make H1 span all columns */
     }
 
-    /* "About Me" card (Section 1) */
-    main section:nth-of-type(1) {
+    /* --- UPDATED GRID LAYOUT RULES --- */
+    /*
+        These rules replace the old :nth-of-type() rules
+        to match your wireframe layout.
+    */
+
+    /* "About Me" card (from HTML file) */
+    #about-me {
         grid-column: 1 / 2; /* Sits in column 1 */
-        grid-row: 2 / 3; /* Sits in row 2 */
+        grid-row: 2 / 3;    /* Sits in row 2 */
     }
 
-    /* "Student Photo/Resources" card (Section 2) */
-    main section:nth-of-type(2) {
+    /* "Student Photo" card (from HTML file) */
+    #student-photo {
         grid-column: 2 / 3; /* Sits in column 2 */
-        grid-row: 2 / 3; /* Sits in row 2 */
+        grid-row: 2 / 3;    /* Sits in row 2 */
     }
 
-    /* "Certificate" card (Section 3) */
-    main section:nth-of-type(3) {
+    /* "Certificate" card (from HTML file) */
+    #certificate-courses {
         grid-column: 1 / -1; /* Spans both columns */
-        grid-row: 3 / 4; /* Sits in row 3 */
+        grid-row: 3 / 4;     /* Sits in row 3 */
+    }
+
+    /* "Resources" card (from HTML file) */
+    #resources {
+        grid-column: 1 / -1; /* Spans both columns */
+        grid-row: 4 / 5;     /* Sits in row 4 */
+    }
+    /* --- END OF UPDATED RULES --- */
+
+
+    /* Center the image vertically in its card if needed */
+    #student-photo {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    
+    #student-photo img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
     }
 
     #course-cards-container {

@@ -152,3 +152,14 @@ footer a {
     text-decoration: underline; 
     margin: 0 0.5rem;
 }
+
+
+/* --- NEW RULE ADDED --- */
+/* Styles for the new student photo card */
+#student-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    margin-top: 0.5rem;
+}
