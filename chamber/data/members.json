@@ -1,0 +1,58 @@
+[
+    {
+      "name": "Apex Innovations",
+      "address": "123 Tech Ave, Salt Lake City, USA",
+      "phone": "801-101-0150",
+      "website": "https://apex.example.com",
+      "image": "images/logo1.png",
+      "membershipLevel": 3
+    },
+    {
+      "name": "Beacon Books",
+      "address": "456 Library Ln, Salt Lake City, USA",
+      "phone": "801-202-0211",
+      "website": "https://beacon.example.com",
+      "image": "images/logo2.png",
+      "membershipLevel": 2
+    },
+    {
+      "name": "Coastal Cafe",
+      "address": "789 Shore St, Salt Lake City, USA",
+      "phone": "801-841-0103",
+      "website": "https://coastal.example.com",
+      "image": "images/logo3.png",
+      "membershipLevel": 1
+    },
+    {
+      "name": "Dynamic Digital",
+      "address": "101 Web Way, Salt Lake City, USA",
+      "phone": "801-431-0169",
+      "website": "https://dynamic.example.com",
+      "image": "images/logo4.png",
+      "membershipLevel": 2
+    },
+    {
+      "name": "Evergreen Gardens",
+      "address": "202 Bloom Blvd, Salt Lake City, USA",
+      "phone": "801-647-0105",
+      "website": "https://evergreen.example.com",
+      "image": "images/logo5.png",
+      "membershipLevel": 3
+    },
+    {
+      "name": "Forge Fitness",
+      "address": "303 Power Pl, Salt Lake City, USA",
+      "phone": "801-292-0106",
+      "website": "https://forge.example.com",
+      "image": "images/logo6.png",
+      "membershipLevel": 1
+    },
+    {
+      "name": "Horizon Logistics",
+      "address": "404 Freight Rd, Salt Lake City, USA",
+      "phone": "801-284-0107",
+      "website": "https://horizon.example.com",
+      "image": "images/logo7.png",
+      "membershipLevel": 2
+    }
+  ]

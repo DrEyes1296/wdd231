@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Salt Lake City Chamber Directory</title>
+    
+    <meta name="description" content="Member directory for the Salt Lake City Chamber of Commerce.">
+    <meta name="author" content="Edson Reyes">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta property="og:title" content="Salt Lake City Chamber of Commerce">
+    <meta property="og:description" content="Discover local businesses in the Salt Lake City Chamber of Commerce.">
+    <meta property="og:image" content="https://your-github-username.github.io/wdd231/chamber/images/og-image.png">
+    <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <a href="directory.html">
+            <img src="images/apple-touch-icon.png" alt="Salt Lake City Chamber Logo" class="logo">
+        </a>
+        <h1>Salt Lake City Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Member Directory</h2>
+        <div class="directory-controls">
+            <button id="grid-btn">Grid</button>
+            <button id="list-btn">List</button>
+        </div>
+        
+        <div id="member-container" class="grid-view"></div>
+    </main>
+
+    <footer>
+        <p>Contact: 641 West North Temple St, Salt Lake City, USA | (123) 456-7890</p>
+        
+        <p>&copy;<span id="current-year"></span> Edson Reyes - WDD 231</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="js/directory.js"></script>
+</body>
+</html>
