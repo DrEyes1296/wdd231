@@ -14,10 +14,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" href="favicon.ico">
+
     <meta property="og:title" content="Salt Lake City Chamber of Commerce">
     <meta property="og:description" content="Discover local businesses in the Salt Lake City Chamber of Commerce.">
-    <meta property="og:image" content="https://your-github-username.github.io/wdd231/chamber/images/og-image.png">
-    <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="https://DrEyes1296.github.io/wdd231/chamber/images/og-image.png">
+    <meta property="og:url" content="https://DrEyes1296.github.io/wdd231/chamber/directory.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -27,7 +32,7 @@
         <a href="directory.html">
             <img src="images/apple-touch-icon.png" alt="Salt Lake City Chamber Logo" class="logo">
         </a>
-        <h1>Salt Lake City Chamber of Commerce</h1>
+        <div class="site-title">Salt Lake City Chamber of Commerce</div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -39,7 +44,7 @@
     </header>
 
     <main>
-        <h2>Member Directory</h2>
+        <h1>Member Directory</h1>
         <div class="directory-controls">
             <button id="grid-btn">Grid</button>
             <button id="list-btn">List</button>
@@ -55,6 +60,6 @@
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
 
-    <script src="scripts/directory.js"></script>
+    <script src="scripts/directory.js" defer></script>
 </body>
 </html>
