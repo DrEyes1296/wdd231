@@ -241,3 +241,136 @@ footer p {
         display: block;
     }
 }
+
+/* --- W03 HOME PAGE STYLES --- */
+
+.hero {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.cta {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    background-color: var(--gold-level);
+    color: var(--primary-color);
+    padding: 1rem;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.cta:hover {
+    background-color: var(--primary-color);
+    color: var(--gold-level);
+}
+
+
+.events, .weather, .spotlights {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.events h2, .weather h2, .spotlights h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#weather-forecast {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.forecast-day {
+    padding: 0.5rem;
+}
+
+#spotlight-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.spotlight-card {
+    background-color: var(--card-bg);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.spotlight-card img {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0.5rem auto;
+}
+
+.spotlight-card h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+.spotlight-card a {
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+
+
+@media (min-width: 768px) {
+    
+    .home-main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+    }
+
+
+    .hero {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    .events {
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+
+    .weather {
+        grid-column: 2 / 3; 
+        grid-row: 2;
+    }
+
+    .spotlights {
+        grid-column: 1 / 3; 
+        grid-row: 3;
+    }
+
+    
+    #spotlight-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .spotlight-card {
+        flex-basis: 30%;
+    }
+}
