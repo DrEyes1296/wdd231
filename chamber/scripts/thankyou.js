@@ -1,3 +1,4 @@
+// --- Footer Dates ---
 try {
     const currentYear = new Date().getFullYear();
     document.getElementById("current-year").textContent = currentYear;
@@ -12,58 +13,49 @@ try {
     console.error("Error setting last modified date:", e);
 }
 
-// --- Display Form Data ---
-document.addEventListener('DOMContentLoaded', () => {
-    const detailsContainer = document.getElementById('application-details');
-    // URLSearchParams makes it easy to read parameters from the URL query string
+// --- Display Form Data Summary ---
+function displayFormSummary() {
+    const summaryDiv = document.getElementById('form-data-summary');
     const params = new URLSearchParams(window.location.search);
     
-    
-    const fieldsMap = {
+    // Map form names to user-friendly labels for required fields
+    const requiredFields = {
         'fname': "First Name",
         'lname': "Last Name",
         'email': "Email",
-        'phone': "Mobile Phone",
-        'orgname': "Business Name",
-        'timestamp': "Application Date/Time"
+        'tel': "Mobile Phone",
+        'bizname': "Business Name",
+        'timestamp': "Application Date"
     };
 
-    let detailsHTML = "<table>";
+    let summaryHTML = "";
 
-    let hasData = false;
-    for (const [key, label] of Object.entries(fieldsMap)) {
-        if (params.has(key)) {
-            let value = params.get(key);
-
-            // Formatted timestamp for better readability
-            if (key === 'timestamp') {
+    // Iterate over the required fields
+    for (const [name, label] of Object.entries(requiredFields)) {
+        if (params.has(name)) {
+            let value = params.get(name);
+            // Format the timestamp for better readability
+            if (name === 'timestamp') {
                 try {
-                    const date = new Date(value);
-                    value = date.toLocaleDateString('en-US', { 
-                        year: 'numeric', month: 'long', day: 'numeric', 
-                        hour: '2-digit', minute: '2-digit', second: '2-digit', 
-                        timeZoneName: 'short' 
+                    const dateObj = new Date(value);
+                    value = dateObj.toLocaleDateString('en-US', {
+                        year: 'numeric', month: 'long', day: 'numeric',
+                        hour: '2-digit', minute: '2-digit', second: '2-digit'
                     });
                 } catch (e) {
-                    
+                    // Keep original value if date formatting fails
                 }
             }
-
-            detailsHTML += `
-                <tr>
-                    <th>${label}:</th>
-                    <td>${value}</td>
-                </tr>
-            `;
-            hasData = true;
+            summaryHTML += `<p><strong>${label}:</strong> ${value}</p>`;
         }
     }
-
-    detailsHTML += "</table>";
     
-    if (hasData) {
-        detailsContainer.innerHTML = detailsHTML;
+    if (summaryHTML) {
+        summaryDiv.innerHTML = summaryHTML;
     } else {
-        detailsContainer.innerHTML = "<p>No application data found. Please ensure you submitted the form correctly.</p>";
+        summaryDiv.innerHTML = "<p>No required form data was submitted or found.</p>";
     }
-});
+}
+
+// Initial function call
+displayFormSummary();

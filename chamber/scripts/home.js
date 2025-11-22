@@ -57,7 +57,7 @@ function displaySpotlights(members) {
     });
 }
 
-// --- OpenWeatherMap API ---
+// --- OpenWeatherMap API --- //
 const apiKey = "ea31028c9c8de35f05114ef1dbb9ce25";
 const lat = "40.7608";
 const lon = "-111.8910";
@@ -88,8 +88,7 @@ function displayWeather(data) {
         <p>Description: ${current.weather[0].description}</p>
     `;
 
-    // 2. Display 3-Day Forecast
-    // Get dates for tomorrow, 2 days from now, and 3 days from now
+    // 2. Display 3-Day Forecast //
     const dates = [];
     for (let i = 1; i <= 3; i++) {
         let date = new Date();

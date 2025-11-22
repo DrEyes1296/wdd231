@@ -12,59 +12,69 @@ try {
     console.error("Error setting last modified date:", e);
 }
 
-// --- Hidden Timestamp ---
-document.addEventListener('DOMContentLoaded', () => {
-    const timestampField = document.getElementById('timestamp');
+// --- Hidden Timestamp Field ---
+try {
+    // Set the value of the hidden timestamp field to the current date and time
+    const timestampField = document.getElementById("timestamp");
     if (timestampField) {
-        // Set the value to the current date and time when the form is loaded
         timestampField.value = new Date().toISOString();
     }
+} catch (e) {
+    console.error("Error setting timestamp:", e);
+}
+
+// --- Membership Card Animation ---
+window.addEventListener('load', () => {
+    const cards = document.querySelectorAll('.level-card');
+    cards.forEach(card => {
+        // Use a slight delay for a staggered fade-in effect
+        const delay = parseInt(card.dataset.delay) || 0;
+        setTimeout(() => {
+            card.classList.add('show');
+        }, delay);
+    });
 });
 
 // --- Modal Functionality ---
-document.addEventListener('DOMContentLoaded', () => {
-    const modalTriggers = document.querySelectorAll('.modal-trigger');
-    const modals = document.querySelectorAll('.modal');
-    const closeButtons = document.querySelectorAll('.close-btn');
+const modalTriggers = document.querySelectorAll('.modal-trigger');
+const modals = document.querySelectorAll('.modal');
+const closeButtons = document.querySelectorAll('.close-btn');
 
-    
-    modalTriggers.forEach(button => {
-        button.addEventListener('click', () => {
-            const modalId = button.getAttribute('data-modal');
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.style.display = 'block';
-            }
-        });
-    });
+// Function to open a specific modal
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "block";
+    }
+}
 
-    
-    closeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const modal = button.closest('.modal');
-            if (modal) {
-                modal.style.display = 'none';
-            }
-        });
+// Function to close all modals
+function closeModals() {
+    modals.forEach(modal => {
+        modal.style.display = "none";
     });
+}
 
-    
-    window.addEventListener('click', (event) => {
-        modals.forEach(modal => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
+// Event listeners for modal triggers
+modalTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        const modalId = trigger.dataset.modal;
+        closeModals(); // Close any currently open modal
+        openModal(modalId);
     });
-    
-    
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-            modals.forEach(modal => {
-                if (modal.style.display === 'block') {
-                    modal.style.display = 'none';
-                }
-            });
+});
+
+// Event listeners for close buttons
+closeButtons.forEach(btn => {
+    btn.addEventListener('click', closeModals);
+});
+
+// Close modal when user clicks anywhere outside of the modal
+window.addEventListener('click', (event) => {
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = "none";
         }
     });
 });
