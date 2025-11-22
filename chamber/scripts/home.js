@@ -81,7 +81,7 @@ async function getWeather() {
 }
 
 function displayWeather(data) {
-    // 1. Display Current Weather
+    // 1. Display Current Weather 
     const current = data.list[0];
     currentContainer.innerHTML = `
         <p>Temperature: ${Math.round(current.main.temp)}°F</p>
