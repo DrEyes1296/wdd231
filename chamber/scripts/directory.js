@@ -69,11 +69,11 @@ function displayMembers(members) {
         // Append elements to the card
         card.appendChild(image);
         card.appendChild(name);
-        card.appendChild(address); // Address is first p
-        card.appendChild(phone);   // Phone is second p
+        card.appendChild(address);
+        card.appendChild(phone);   
         card.appendChild(website);
         
-        // Append the card to the container
+        
         container.appendChild(card);
     });
 }

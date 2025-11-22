@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Salt Lake City Chamber Directory</title>
-    
-    <meta name="description" content="Member directory for the Salt Lake City Chamber of Commerce.">
+    <title>Salt Lake City Chamber - Thank You</title>
+    <meta name="description" content="Thank you for applying for membership with the Salt Lake City Chamber of Commerce.">
     <meta name="author" content="Edson Reyes">
     
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -15,10 +14,10 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" href="favicon.ico">
 
-    <meta property="og:title" content="Salt Lake City Chamber of Commerce">
-    <meta property="og:description" content="Discover local businesses in the Salt Lake City Chamber of Commerce.">
+    <meta property="og:title" content="Salt Lake City Chamber of Commerce - Thank You">
+    <meta property="og:description" content="Thank you for your membership application!">
     <meta property="og:image" content="https://DrEyes1296.github.io/wdd231/chamber/images/og-image.png">
-    <meta property="og:url" content="https://DrEyes1296.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://DrEyes1296.github.io/wdd231/chamber/thankyou.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +26,8 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
 
-    <script src="scripts/directory.js" defer></script>
+    <!-- New JS file for displaying form data -->
+    <script src="scripts/thankyou.js" defer></script>
 </head>
 <body>
     <header>
@@ -39,21 +39,24 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <!-- UPDATED LINK -->
                 <li><a href="join.html">Join</a></li>
                 <li><a href="#">Discover</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h1>Member Directory</h1>
-        <div class="directory-controls">
-            <button id="grid-btn">Grid</button>
-            <button id="list-btn">List</button>
-        </div>
+    <main class="thankyou-main">
+        <h1>Thank You for Joining!</h1>
+        <p>Your membership application has been successfully submitted. We will review your information and be in touch soon. Thank you! </p>
         
-        <div id="member-container" class="grid-view"></div>
+        <section class="form-review">
+            <h2>Application Summary</h2>
+            <div id="application-details">
+                
+                <p>Loading your submitted details...</p>
+            </div>
+            <a href="index.html" class="cta">Return to Home</a>
+        </section>
     </main>
 
     <footer>
@@ -63,5 +66,5 @@
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
 
-    </body>
+</body>
 </html>

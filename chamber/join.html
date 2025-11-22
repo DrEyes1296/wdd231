@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Salt Lake City Chamber - Join Us</title>
+    <meta name="description" content="Apply for membership with the Salt Lake City Chamber of Commerce!">
+    <meta name="author" content="Edson Reyes">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <meta property="og:title" content="Salt Lake City Chamber of Commerce - Join">
+    <meta property="og:description" content="Join local businesses in the Salt Lake City Chamber of Commerce.">
+    <meta property="og:image" content="https://DrEyes1296.github.io/wdd231/chamber/images/og-image.png">
+    <meta property="og:url" content="https://DrEyes1296.github.io/wdd231/chamber/join.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    
+    <script src="scripts/join.js" defer></script> 
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="apple-touch-icon.png" alt="Salt Lake City Chamber Logo" class="logo">
+        </a>
+        <div class="site-title">Salt Lake City Chamber of Commerce</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="join-main">
+        <h1>Chamber Membership Application</h1>
+
+        <div class="join-content">
+            <form method="get" action="thankyou.html" class="join-form">
+                
+                <!-- Applicant Information -->
+                <fieldset>
+                    <legend>Applicant Information</legend>
+                    <label>First Name*
+                        <input type="text" id="fname" name="fname" title="Applicant's First Name" autocomplete="given-name" required>
+                    </label>
+                    <label>Last Name*
+                        <input type="text" id="lname" name="lname" title="Applicant's Last Name" autocomplete="family-name" required>
+                    </label>
+                    <label>Organizational Title
+                        <!-- Pattern: 7+ alpha characters, hyphens, and spaces -->
+                        <input type="text" id="title" name="title" title="Organizational Title (7+ alpha, hyphen, space)" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" required>
+                    </label>
+                    <label>Email*
+                        <input type="email" id="email" name="email" title="Email Address" autocomplete="email" placeholder="example@chamber.org" required>
+                    </label>
+                    <label>Mobile Phone*
+                        <input type="tel" id="phone" name="phone" title="Mobile Phone Number" autocomplete="tel" required>
+                    </label>
+                </fieldset>
+
+                <!-- Organization Information -->
+                <fieldset>
+                    <legend>Organization Details</legend>
+                    <label>Business/Organization Name*
+                        <input type="text" id="orgname" name="orgname" title="Business or Organization Name" autocomplete="organization" required>
+                    </label>
+                    
+                    <label for="level">Membership Level Selection</label>
+                    <select id="level" name="level" title="Select Membership Level">
+                        <option value="" disabled selected>Select a Level</option>
+                        <option value="np">NP Membership (No Fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+
+                    <label>Business Description
+                        <textarea id="description" name="description" title="Business or Organization Description"></textarea>
+                    </label>
+                </fieldset>
+                
+                <!-- Hidden Timestamp and Submit Button -->
+                <input type="hidden" id="timestamp" name="timestamp">
+                <input type="submit" value="Join the Chamber">
+            </form>
+
+            <!-- Membership Level Cards -->
+            <div class="membership-levels">
+                <h2>Membership Levels</h2>
+                <div class="card-container">
+                    <section class="membership-card level-np">
+                        <h3>NP Membership</h3>
+                        <p>For Non-Profit Organizations.</p>
+                        <button class="modal-trigger" data-modal="np-modal">Learn More</button>
+                    </section>
+                    <section class="membership-card level-bronze">
+                        <h3>Bronze Membership</h3>
+                        <p>Essential benefits for new businesses.</p>
+                        <button class="modal-trigger" data-modal="bronze-modal">Learn More</button>
+                    </section>
+                    <section class="membership-card level-silver">
+                        <h3>Silver Membership</h3>
+                        <p>Increased networking and discounts.</p>
+                        <button class="modal-trigger" data-modal="silver-modal">Learn More</button>
+                    </section>
+                    <section class="membership-card level-gold">
+                        <h3>Gold Membership</h3>
+                        <p>Maximum visibility and advertising.</p>
+                        <button class="modal-trigger" data-modal="gold-modal">Learn More</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact: 641 West North Temple St, Salt Lake City, USA | (123) 456-7890</p>
+        
+        <p>&copy;<span id="current-year"></span> Edson Reyes - WDD 231</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <div id="np-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>NP Membership Benefits</h3>
+            <p><strong>Cost:</strong> No Fee</p>
+            <ul>
+                <li>Access to monthly e-newsletter!</li>
+                <li>Inclusion in the online member directory (basic listing)!</li>
+                <li>Discount on select training workshops!</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Bronze Membership Benefits</h3>
+            <p><strong>Cost:</strong> $100/year</p>
+            <ul>
+                <li>All NP benefits.</li>
+                <li>Invitations to exclusive member networking events.</li>
+                <li>5% discount on all chamber event tickets.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="silver-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Silver Membership Benefits</h3>
+            <p><strong>Cost:</strong> $250/year</p>
+            <ul>
+                <li>All Bronze benefits.</li>
+                <li>Opportunity for business spotlight in the newsletter (quarterly).</li>
+                <li>15% discount on all chamber event tickets.</li>
+                <li>Free access to business training seminars.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="gold-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Gold Membership Benefits</h3>
+            <p><strong>Cost:</strong> $500/year</p>
+            <ul>
+                <li>All Silver benefits.</li>
+                <li>Priority placement for advertising on the website.</li>
+                <li>Eligibility for a **Home Page Spotlight** (most advertising value).</li>
+                <li>25% discount on all chamber event tickets.</li>
+                <li>Invitation to exclusive CEO Roundtables.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
