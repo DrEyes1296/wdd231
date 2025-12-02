@@ -1,4 +1,4 @@
-/* Ensure the file is in a 'styles' folder: styles/siteplan.css */
+
 
 /* --- General Structure & Typography Setup --- */
 body {
@@ -15,7 +15,7 @@ h1, h2, h3 {
     color: #005A9C; /* Primary Blue */
 }
 
-/* --- Color Scheme Application (Used in Document) --- */
+/* --- Color Scheme Application --- */
 header {
     background-color: #005A9C; /* Primary Blue */
     color: white;
@@ -35,7 +35,7 @@ main section {
     border-radius: 5px;
 }
 
-/* Light Gray Background example (Used for alternating sections/tables) */
+
 main section:nth-child(even) {
     background-color: #f4f4f4; /* Light Gray */
 }
@@ -70,7 +70,7 @@ table, th, td {
 .color-swatch.dark-text { background-color: #333333; }
 .color-swatch.light-bg { background-color: #f4f4f4; }
 
-/* --- Typography Examples (Demonstrating fonts) --- */
+/* --- Typography Examples --- */
 .font-poppins {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
