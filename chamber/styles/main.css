@@ -70,9 +70,9 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Wayfinding: Highlight active page */
+/* Wayfinding: Highlight active page (Fixed contrast issue) */
 nav a.active {
-    background-color: var(--link-color); 
+    background-color: #0069D9; /* Darker blue than --link-color to meet WCAG AA contrast ratio */
     font-weight: bold;
 }
 
@@ -493,7 +493,6 @@ footer p {
 
 .modal-trigger:hover {
     background-color: #0056b3;
-    color: white;
 }
 
 /* --- Modal Styles --- */
@@ -628,7 +627,7 @@ footer p {
     }
 }
 
-
+/* Refined Discover Card Look */
 .discover-card {
     background-color: var(--card-bg);
     border: 1px solid #ddd; 
@@ -737,7 +736,7 @@ footer p {
     }
 }
 
-
+/* --- Gallery Grid Layout: Large Screen (Desktop) FIX --- */
 @media (min-width: 1025px) {
     #discover-gallery {
         /* 4x2 Grid for compact layout */
