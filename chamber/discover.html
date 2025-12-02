@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Salt Lake City Chamber - Discover SLC</title>
+    
+    <meta name="description" content="Discover the best of Salt Lake City: attractions, landmarks, and demographic information for prospective chamber members and visitors.">
+    <meta name="author" content="Edson Reyes">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <meta property="og:title" content="Salt Lake City Chamber of Commerce - Discover">
+    <meta property="og:description" content="Discover local attractions and demographics in Salt Lake City.">
+    <meta property="og:image" content="https://DrEyes1296.github.io/wdd231/chamber/images/og-image.png">
+    <meta property="og:url" content="https://DrEyes1296.github.io/wdd231/chamber/discover.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/discover.js" defer type="module"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="apple-touch-icon.png" alt="Salt Lake City Chamber Logo" class="logo">
+        </a>
+        <div class="site-title">Salt Lake City Chamber of Commerce</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Discover Salt Lake City</h1>
+        
+        <div id="visit-message" class="visit-banner"></div>
+        
+        <section class="demographics">
+            <h2>Area Demographics</h2>
+            <div class="demographics-grid">
+                <p><strong>Population:</strong> ~200,000</p>
+                <p><strong>Elevation:</strong> 4,226 ft</p>
+                <p><strong>Major Industries:</strong> Tech, Healthcare, Tourism</p>
+                <p><strong>Average Temperature (July):</strong> 79°F</p>
+            </div>
+        </section>
+
+        <section id="discover-gallery"></section>
+    </main>
+
+    <footer>
+        <p>Contact: 641 West North Temple St, Salt Lake City, USA | (123) 456-7890</p>
+        
+        <p>&copy;<span id="current-year"></span> Edson Reyes - WDD 231</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>
