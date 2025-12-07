@@ -48,26 +48,26 @@ h1, h2, h3 {
     background-color: #ffd166;
 }
 
-/* --- 3. Header & Navigation --- */
+/* --- 3. Header & Navigation (Rubric 5: Responsive Menu & Wayfinding) --- */
 .site-header {
     background-color: var(--primary-color);
     color: white;
     padding: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensures logo and nav/hamburger are far apart */
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
 }
 
 .company-logo {
-    height: 40px;
+    height: 40px; 
     width: auto;
 }
 
 .main-nav {
-    order: 3;
+    order: 3; /* Move below logo and CTA on small screens */
     width: 100%;
-    display: none;
+    display: none; /* Hidden by default on small screens */
 }
 
 .main-nav ul {
@@ -95,16 +95,16 @@ h1, h2, h3 {
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
-    display: block;
-    margin-left: auto;
+    display: block; /* Visible on mobile */
+    margin-left: auto; /* Push the hamburger to the right edge */
     order: 2;
 }
 
 .main-nav.open {
-    display: block;
+    display: block; /* Show menu when 'open' class is added by JS */
 }
 
-
+/* Wayfinding: Highlight current page link (Rubric 5) */
 .main-nav ul li a.active {
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -114,7 +114,7 @@ h1, h2, h3 {
 
 /* --- 4. Hero Section --- */
 .hero {
-    background: var(--light-bg);
+    background: var(--light-bg); /* Use image background in final project */
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -136,9 +136,12 @@ h1, h2, h3 {
 }
 
 
+/* --- 5. Main Content Layouts (Rubric 6: Complex Layouts) --- */
+
+/* index.html - Feature Grid */
 .features-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Default to single column on mobile */
     gap: 1.5rem;
     margin-top: 1.5rem;
     text-align: center;
@@ -151,10 +154,10 @@ h1, h2, h3 {
     background-color: white;
 }
 
-
+/* services.html - Dynamic Service Grid */
 .services-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Default to single column on mobile */
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -197,7 +200,7 @@ h1, h2, h3 {
 /* contact.html - Contact Layout */
 .contact-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Default to single column on mobile */
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -235,6 +238,7 @@ legend {
     color: var(--primary-color);
 }
 
+/* Form Action Page Display (Rubric 7) */
 .submitted-data-grid {
     display: grid;
     grid-template-columns: 1fr; /* Default to single column on mobile */
@@ -260,8 +264,9 @@ legend {
 }
 
 
+/* --- 6. Modal Dialog (Rubric 10) --- */
 .modal {
-    display: none; 
+    display: none; /* Hidden by default */
     position: fixed; 
     z-index: 100; 
     left: 0;
@@ -359,7 +364,7 @@ legend {
 
 /* --- 8. Media Queries (Large Screen View) --- */
 @media (min-width: 768px) {
-
+    /* Header/Navigation (Rubric 5) */
     .site-header {
         flex-wrap: nowrap;
     }
@@ -376,7 +381,7 @@ legend {
     }
 
     .main-nav ul {
-        flex-direction: row;
+        flex-direction: row; /* Horizontal links (Rubric 5) */
     }
 
     .main-nav ul li a {
@@ -388,7 +393,7 @@ legend {
         padding-right: 0;
     }
 
-    /* Layouts */
+    /* Layouts (Rubric 6) */
     .features-grid {
         grid-template-columns: repeat(3, 1fr);
     }
