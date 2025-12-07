@@ -1,0 +1,416 @@
+:root {
+    --primary-color: #004d99; /* Deep Blue */
+    --secondary-color: #f7b32c; /* Gold/Yellow */
+    --text-color: #333;
+    --light-bg: #f4f4f4;
+    --max-width: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem;
+    min-height: 70vh;
+}
+
+/* --- 2. Typography & Components --- */
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.cta-button, .cta-button-large {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.cta-button:hover, .cta-button-large:hover {
+    background-color: #ffd166;
+}
+
+/* --- 3. Header & Navigation (Rubric 5: Responsive Menu & Wayfinding) --- */
+.site-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between; /* Ensures logo and nav/hamburger are far apart */
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+}
+
+.company-logo {
+    height: 40px; 
+    width: auto;
+}
+
+.main-nav {
+    order: 3; /* Move below logo and CTA on small screens */
+    width: 100%;
+    display: none; /* Hidden by default on small screens */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-nav ul li a:hover {
+    background-color: #0066cc;
+}
+
+.hamburger-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block; /* Visible on mobile */
+    margin-left: auto; /* Push the hamburger to the right edge */
+    order: 2;
+}
+
+.main-nav.open {
+    display: block; /* Show menu when 'open' class is added by JS */
+}
+
+/* Wayfinding: Highlight current page link (Rubric 5) */
+.main-nav ul li a.active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+
+/* --- 4. Hero Section --- */
+.hero {
+    background: var(--light-bg); /* Use image background in final project */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    margin-bottom: 2rem;
+}
+
+.cta-button-large {
+    font-size: 1.2rem;
+}
+
+
+/* --- 5. Main Content Layouts (Rubric 6: Complex Layouts) --- */
+
+/* index.html - Feature Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column on mobile */
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.feature {
+    padding: 1.5rem;
+    border: 1px solid var(--light-bg);
+    border-radius: 8px;
+    background-color: white;
+}
+
+/* services.html - Dynamic Service Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column on mobile */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.service-card ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.card-details {
+    margin-top: 1rem;
+    font-size: 0.9em;
+    padding-top: 0.5rem;
+    border-top: 1px dashed #eee;
+}
+
+.service-card button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.service-card button:hover {
+    background-color: #0066cc;
+}
+
+/* contact.html - Contact Layout */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column on mobile */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Form Action Page Display (Rubric 7) */
+.submitted-data-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column on mobile */
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: var(--light-bg);
+    margin-bottom: 2rem;
+}
+.data-item {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word; /* Ensure long content breaks */
+}
+.data-item strong {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--primary-color);
+}
+.data-item:last-child {
+    border-bottom: none;
+}
+
+
+/* --- 6. Modal Dialog (Rubric 10) --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 100; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; 
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+#service-detail-modal .modal-content {
+    text-align: left; /* Adjust text alignment for detailed info */
+}
+
+#modal-service-body {
+    margin-bottom: 1rem;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* --- 7. Footer --- */
+.site-footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 1rem 1rem;
+    margin-top: 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-column h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.footer-bottom a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* --- 8. Media Queries (Large Screen View) --- */
+@media (min-width: 768px) {
+    /* Header/Navigation (Rubric 5) */
+    .site-header {
+        flex-wrap: nowrap;
+    }
+
+    .hamburger-menu {
+        display: none; /* Hide button */
+    }
+
+    .main-nav {
+        order: initial; 
+        width: auto;
+        display: block; /* Always show menu */
+        margin-left: auto; /* Pushes the menu and logo far apart */
+    }
+
+    .main-nav ul {
+        flex-direction: row; /* Horizontal links (Rubric 5) */
+    }
+
+    .main-nav ul li a {
+        border-top: none;
+        padding: 0.75rem 1rem;
+    }
+
+    .main-nav ul li:last-child a {
+        padding-right: 0;
+    }
+
+    /* Layouts (Rubric 6) */
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-container {
+        grid-template-columns: 2fr 1fr; /* Form is wider than info column */
+    }
+
+    .submitted-data-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}

@@ -1,0 +1,103 @@
+/* --- General Structure & Typography Setup --- */
+body {
+    font-family: 'Lato', sans-serif; /* Body and Paragraphs */
+    color: #333333; /* Dark Text */
+    background-color: white;
+    margin: 0 auto;
+    max-width: 960px; /* Constrain plan width for readability */
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif; /* Headings */
+    color: #005A9C; /* Primary Blue */
+}
+
+/* --- Color Scheme Application --- */
+header {
+    background-color: #005A9C; /* Primary Blue */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+header h2 {
+    color: white; /* Ensures h2 is white on blue header */
+}
+
+main section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #005A9C;
+    border-radius: 5px;
+}
+
+
+main section:nth-child(even) {
+    background-color: #f4f4f4; /* Light Gray */
+}
+
+/* Accent Gold usage (for table header) */
+table th {
+    background-color: #FDB813; /* Accent Gold */
+    color: #333333;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+table, th, td {
+    border: 1px solid #333333;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Swatches for visualizing colors */
+.color-swatch {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border: 1px solid #333333;
+    vertical-align: middle;
+}
+.color-swatch.primary { background-color: #005A9C; }
+.color-swatch.accent { background-color: #FDB813; }
+.color-swatch.dark-text { background-color: #333333; }
+.color-swatch.light-bg { background-color: #f4f4f4; }
+
+/* --- Typography Examples --- */
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.font-lato {
+    font-family: 'Lato', sans-serif;
+}
+.example-heading {
+    font-size: 1.5rem;
+    padding: 5px 0;
+}
+
+/* --- Wireframe Styling (for visual clarity) --- */
+.wireframe-container {
+    border: 1px dashed #005A9C;
+    padding: 15px;
+    margin-top: 10px;
+}
+.wireframe-list {
+    list-style: square;
+    color: #005A9C;
+}
+
+/* Footer styling */
+footer {
+    background-color: #005A9C; /* Primary Blue */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+    border-radius: 0 0 5px 5px;
+}
