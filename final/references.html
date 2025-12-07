@@ -15,28 +15,74 @@
 
     <title>References and Attributions</title>
     
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js" type="module" defer></script> 
 </head>
 <body>
-    <h1>References and Attributions</h1>
-    <p>This page lists all external resources used in the creation of the DaMoSa Cleaning Services website.</p>
-
-    <h2>Images</h2>
-    <ul>
-        <li>Damosa Logo: Original creation.</li>
-        <li>[List source of any external images used, e.g., "Janitorial image on services page: Photo by John Smith via Pexels"]</li>
-    </ul>
-
-    <h2>Content and Quotes</h2>
-    <ul>
-        <li>Quote on WDD 231 Description: "The desire to create..." by Dieter F. Uchtdorf.</li>
-        <li>[List source of any external text content or data used.]</li>
-    </ul>
+    <header class="site-header">
+        <a href="index.html" id="logo">
+            <img src="images/damosa.jpg" alt="DaMoSa Cleaning Services Logo" class="company-logo">
+        </a>
+        <nav class="main-nav">
+            <ul id="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger-menu" aria-expanded="false" aria-controls="main-menu">☰</button> 
+    </header>
     
-    <p><a href="index.html">Return to Home</a></p>
+    <main>
+        <h1>References and Attributions</h1>
+        <p>This page lists all external resources used in the creation of the DaMoSa Cleaning Services website.</p>
+
+        <h2>Images</h2>
+        <ul>
+            <li>Damosa Logo: Original creation.</li>
+            <li>[List source of any external images used, e.g., "Janitorial image on services page: Photo by John Smith via Pexels"]</li>
+        </ul>
+
+        <h2>Content and Quotes</h2>
+        <ul>
+            <li>Quote on WDD 231 Description: "The desire to create..." by Dieter F. Uchtdorf.</li>
+            <li>[List source of any external text content or data used.]</li>
+        </ul>
+        
+        <p><a href="index.html" class="cta-button">Return to Home</a></p>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>DaMoSa Cleaning Services</h4>
+                <p>Dedicated to providing the highest quality commercial cleaning services since 2010.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>
+                    damosausa@yahoo.com<br>
+                    Boston, MA
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="currentyear"></span> DaMoSa Cleaning Services. All Rights Reserved. | <a href="references.html">References</a></p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -19,6 +19,11 @@ body {
     background-color: #fff;
 }
 
+/* FIX: Moved inline style border:0 from iframes to CSS */
+iframe {
+    border: 0;
+}
+
 main {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -274,7 +279,9 @@ legend {
     width: 100%; 
     height: 100%; 
     overflow: auto; 
-    background-color: rgba(0,0,0,0.4); 
+    /* ACCESSIBILITY FIX 1: The text inside the modal overlay (modal-content) was using default text-color 
+       against the dark overlay. Ensure it has enough contrast. */
+    background-color: rgba(0,0,0,0.7); /* Darken overlay slightly for better contrast */
     justify-content: center;
     align-items: center;
 }
@@ -301,7 +308,8 @@ legend {
 }
 
 .close-button {
-    color: #aaa;
+    /* ACCESSIBILITY FIX 2: Text rgb(170 170 170) on background rgb(254 254 254) has low contrast. */
+    color: #555; /* Darkened from #aaa (rgb(170)) to meet contrast requirements (4.5:1) */
     float: right;
     font-size: 28px;
     font-weight: bold;
