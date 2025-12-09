@@ -302,9 +302,8 @@ legend {
     justify-content: center;
     align-items: center;
     
-    /* FIX: Force text visible through the translucent backdrop to be white 
-       to pass the AA contrast check against the dark backdrop. */
-    color: white; 
+    
+    color: #EEEEEE; 
 }
 
 .modal-content {
@@ -319,8 +318,7 @@ legend {
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     
-    /* IMPORTANT: Re-apply the standard dark text color to the content box
-       so the text inside the white box is readable. */
+    
     color: var(--text-color);
 }
 
