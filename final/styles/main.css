@@ -19,7 +19,7 @@ body {
     background-color: #fff;
 }
 
-/* FIX: CSS rule to address inline style audit issue for iframes */
+
 iframe {
     border: 0;
 }
@@ -119,7 +119,7 @@ h1, h2, h3 {
 
 /* --- 4. Hero Section --- */
 .hero {
-    background: var(--light-bg); /* Use image background in final project */
+    background: var(--light-bg);
     background-size: cover;
     background-position: center;
     text-align: center;
