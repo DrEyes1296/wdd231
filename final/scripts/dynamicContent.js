@@ -49,13 +49,12 @@ function attachModalListeners(services) {
                 title.textContent = service.name;
                 
                 // Rubric 11: Template Literals & DOM Manipulation
-                // Displaying more than 4 properties in the detail view for completeness
+                // The price factor line has been REMOVED here to prevent customer display.
                 body.innerHTML = `
                     <p><strong>Description:</strong> ${service.description}</p>
                     <p><strong>Category:</strong> ${service.category}</p>
                     <p><strong>Frequency:</strong> ${service.frequency}</p>
                     <p><strong>Keywords:</strong> ${service.keywords.join(', ')}</p>
-                    <p><em>Internal Price Factor: ${service.price_factor}</em></p>
                 `;
                 
                 modal.style.display = 'flex';
@@ -68,7 +67,7 @@ function attachModalListeners(services) {
 
 /**
  * Fetches data and renders the list of services.
- * Uses Fetch API and try...catch for robust error handling (Rubric 12).
+
  */
 export async function renderServices() {
     if (!serviceListings) return; // Only run on services.html

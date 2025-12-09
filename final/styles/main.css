@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #004d99; /* Deep Blue */
-    --secondary-color: #f7b32c; /* Gold/Yellow */
+    --primary-color: #004d99;
+    --secondary-color: #f7b32c;
     --text-color: #333;
     --light-bg: #f4f4f4;
     --max-width: 1200px;
@@ -19,7 +19,6 @@ body {
     background-color: #fff;
 }
 
-
 iframe {
     border: 0;
 }
@@ -31,7 +30,6 @@ main {
     min-height: 70vh;
 }
 
-/* --- 2. Typography & Components --- */
 h1, h2, h3 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
@@ -53,26 +51,32 @@ h1, h2, h3 {
     background-color: #ffd166;
 }
 
-/* --- 3. Header & Navigation (Rubric 5: Responsive Menu & Wayfinding) --- */
 .site-header {
     background-color: var(--primary-color);
     color: white;
     padding: 1rem;
     display: flex;
-    justify-content: space-between; /* Ensures logo and nav/hamburger are far apart */
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allows wrapping on small screens */
+    flex-wrap: wrap;
+}
+
+#logo {
+    background-color: var(--primary-color);
+    line-height: 0;
 }
 
 .company-logo {
     height: 40px; 
     width: auto;
+    border: none;
+    display: block; 
 }
 
 .main-nav {
-    order: 3; /* Move below logo and CTA on small screens */
+    order: 3;
     width: 100%;
-    display: none; /* Hidden by default on small screens */
+    display: none;
 }
 
 .main-nav ul {
@@ -100,16 +104,15 @@ h1, h2, h3 {
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
-    display: block; /* Visible on mobile */
-    margin-left: auto; /* Push the hamburger to the right edge */
+    display: block;
+    margin-left: auto;
     order: 2;
 }
 
 .main-nav.open {
-    display: block; /* Show menu when 'open' class is added by JS */
+    display: block;
 }
 
-/* Wayfinding: Highlight current page link (Rubric 5) */
 .main-nav ul li a.active {
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -117,7 +120,6 @@ h1, h2, h3 {
 }
 
 
-/* --- 4. Hero Section --- */
 .hero {
     background: var(--light-bg);
     background-size: cover;
@@ -141,12 +143,9 @@ h1, h2, h3 {
 }
 
 
-/* --- 5. Main Content Layouts (Rubric 6: Complex Layouts) --- */
-
-/* index.html - Feature Grid */
 .features-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Default to single column on mobile */
+    grid-template-columns: 1fr;
     gap: 1.5rem;
     margin-top: 1.5rem;
     text-align: center;
@@ -159,10 +158,9 @@ h1, h2, h3 {
     background-color: white;
 }
 
-/* services.html - Dynamic Service Grid */
 .services-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Default to single column on mobile */
+    grid-template-columns: 1fr;
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -202,10 +200,9 @@ h1, h2, h3 {
     background-color: #0066cc;
 }
 
-/* contact.html - Contact Layout */
 .contact-container {
     display: grid;
-    grid-template-columns: 1fr; /* Default to single column on mobile */
+    grid-template-columns: 1fr;
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -243,10 +240,9 @@ legend {
     color: var(--primary-color);
 }
 
-/* Form Action Page Display (Rubric 7) */
 .submitted-data-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Default to single column on mobile */
+    grid-template-columns: 1fr;
     gap: 1rem;
     padding: 1rem;
     border: 1px solid #ccc;
@@ -257,7 +253,7 @@ legend {
 .data-item {
     padding: 0.5rem;
     border-bottom: 1px solid #ddd;
-    word-wrap: break-word; /* Ensure long content breaks */
+    word-wrap: break-word;
 }
 .data-item strong {
     display: block;
@@ -269,9 +265,8 @@ legend {
 }
 
 
-/* --- 6. Modal Dialog (Rubric 10) --- */
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed; 
     z-index: 100; 
     left: 0;
@@ -279,7 +274,6 @@ legend {
     width: 100%; 
     height: 100%; 
     overflow: auto; 
-    /* ACCESSIBILITY FIX 1: Increased opacity for better text contrast against overlay */
     background-color: rgba(0,0,0,0.7); 
     justify-content: center;
     align-items: center;
@@ -299,7 +293,7 @@ legend {
 }
 
 #service-detail-modal .modal-content {
-    text-align: left; /* Adjust text alignment for detailed info */
+    text-align: left;
 }
 
 #modal-service-body {
@@ -307,7 +301,6 @@ legend {
 }
 
 .close-button {
-    /* ACCESSIBILITY FIX 2: Darkened color from #aaa to #555 for required contrast */
     color: #555; 
     float: right;
     font-size: 28px;
@@ -327,7 +320,6 @@ legend {
     cursor: pointer;
 }
 
-/* --- 7. Footer --- */
 .site-footer {
     background-color: var(--primary-color);
     color: white;
@@ -369,26 +361,24 @@ legend {
     text-decoration: none;
 }
 
-/* --- 8. Media Queries (Large Screen View) --- */
 @media (min-width: 768px) {
-    /* Header/Navigation (Rubric 5) */
     .site-header {
         flex-wrap: nowrap;
     }
 
     .hamburger-menu {
-        display: none; /* Hide button */
+        display: none;
     }
 
     .main-nav {
         order: initial; 
         width: auto;
-        display: block; /* Always show menu */
-        margin-left: auto; /* Pushes the menu and logo far apart */
+        display: block;
+        margin-left: auto;
     }
 
     .main-nav ul {
-        flex-direction: row; /* Horizontal links (Rubric 5) */
+        flex-direction: row;
     }
 
     .main-nav ul li a {
@@ -400,7 +390,6 @@ legend {
         padding-right: 0;
     }
 
-    /* Layouts (Rubric 6) */
     .features-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -410,7 +399,7 @@ legend {
     }
     
     .contact-container {
-        grid-template-columns: 2fr 1fr; /* Form is wider than info column */
+        grid-template-columns: 2fr 1fr;
     }
 
     .submitted-data-grid {
